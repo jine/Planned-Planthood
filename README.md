@@ -31,7 +31,7 @@ Följande är extra och sådant ni inte måste ha med om ni inte hinner/vill/kan
 * Använd gärna avatarer från [https://avatar-placeholder.iran.liara.run/avatars](https://avatar-placeholder.iran.liara.run/avatars) eller den svg som finns i projektet.
 * Använd gärna bilder från [https://picsum.photos/](https://picsum.photos/). Vill ni använda andra är det ok, men se till att det ser bra ut i sammanhanget.
 * Vill ni ändra texter och lägga in egen info är det också ok, bara det fyller samma typ av funktion och inte ändrar sidans utseende bortom innehållet.
-* SVG finns i mappen assets/Images och kan användas antingen som vanliga bilder eller direkt inkopierade som HTML i koden. Om ni vill ändra färger måste de vara inkopierade inline. Se här för hur man kan ändra färger med CSS: https://nucleoapp.com/blog/post/change-svg-color-css
+* SVG finns i mappen assets/Images och kan användas antingen som vanliga bilder eller direkt inkopierade som HTML i koden. Om ni vill ändra färger med CSS på SVG måste de vara inkopierade inline. Se här för hur man kan ändra färger med CSS: https://nucleoapp.com/blog/post/change-svg-color-css
 * Länkarna ska vara semantiska men behöver inte gå någonstans (använd href="#")
   
 ## Design
