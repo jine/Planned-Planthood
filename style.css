@@ -190,6 +190,58 @@ body {
   margin-block-start: var(--flow-space-lg);
 }
 
+header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding-bottom: 2rem; /* bottom padding */
+  margin-bottom: 2rem; /* bottom margin */
+  background-color: var(--clr-primary-light-1);
+  border-bottom: 1px solid var(--clr-neutral-200);
+
+  .logo {
+    font-size: var(--fs-800);
+    font-weight: var(--fw-900);
+    color: var(--clr-primary-dark);
+
+    svg {
+      max-width: 2rem;
+      height: auto;
+      display: inline-block;
+      stroke: var(--clr-accent);
+    }
+
+    .logo-name {
+      display: inline-block;
+      max-inline-size: 10ch; /* max 10ch per line = wrap to two lines */
+      text-transform: uppercase;
+      line-height: 0.8; /* tighten line height for two-line version */
+      font-size: var(--fs-400);
+      font-weight: var(--fw-600); 
+      color: var(--clr-accent);
+    }
+  }
+
+  .main-nav {
+    display: grid; /* use grid to center vertically */
+    align-items: center;
+    justify-content: end;
+    
+    ul {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 2rem;
+    }
+
+    a {
+      font-size: var(--fs-400);
+      font-weight: var(--fw-600);
+      text-transform: uppercase;
+    }
+  }
+}
+
 .newsletter {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -267,7 +319,7 @@ body {
   padding: 1rem; /* outer padding */
   box-sizing: border-box;
 
-  /* we need a media-querie here to make it responsive */
+  /* we need a media-queries OR auto-fit/minmax or similar here to make it responsive */
   grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
   grid-template-rows: repeat(2, 20rem); /* 2 equal rows of 20rem height */
 
@@ -290,7 +342,7 @@ body {
     grid-row: 1 / 2;
   }
 
-  /* Näckros - top row middle */
+  /* Näckros - top row middle (2 columns) */
   img:nth-child(3) {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
@@ -302,13 +354,13 @@ body {
     grid-row: 1 / 2;
   }
 
-  /* Gröna blad - bottom row middle */
+  /* Gröna blad - bottom row middle (2 columns) */
   img:nth-child(5) {
     grid-column: 3 / 5;
     grid-row: 2 / 3;
   }
 
-  /* Växtlighet - bottom row right (2 columns) */
+  /* Fält med träd - bottom row right (2 columns) */
   img:nth-child(6) {
     grid-column: 5 / 7;
     grid-row: 2 / 3;
