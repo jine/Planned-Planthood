@@ -193,6 +193,16 @@ body {
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+  img:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  img:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
 }
 
 .plants-container {
@@ -223,10 +233,36 @@ body {
     grid-row: 1 / -1;
   }
 
-  .avatar {
-    max-width: 4rem;
-    border-radius: 2rem;
+  /* author info container */
+  .author-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+
+    .avatar {
+      max-width: 4rem;
+      border-radius: 2rem;
+    }
   }
+
+  /* tags for each plant */
+  .tags {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+
+  /* individual tags inside the tags list */
+  .tags>li {
+    background-color: var(--clr-fragrant);
+    color: var(--clr-primary-light-1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: var(--fs-200);
+  }
+
 }
 
 /*
