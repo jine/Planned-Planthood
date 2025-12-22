@@ -194,11 +194,9 @@ header {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 4rem;
   padding-bottom: 2rem; /* bottom padding */
   margin-bottom: 2rem; /* bottom margin */
   background-color: var(--clr-primary-light-1);
-  border-bottom: 1px solid var(--clr-neutral-200);
 
   .logo {
     font-size: var(--fs-800);
