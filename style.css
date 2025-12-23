@@ -190,12 +190,10 @@ body {
   margin-block-start: var(--flow-space-lg);
 }
 
-header {
+.site-header {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  padding-bottom: 2rem; /* bottom padding */
-  margin-bottom: 2rem; /* bottom margin */
   background-color: var(--clr-primary-light-1);
 
   .logo {
@@ -203,14 +201,14 @@ header {
     font-weight: var(--fw-900);
     color: var(--clr-primary-dark);
 
-    svg {
+    .logo-icon {
       max-width: 2rem;
       height: auto;
       display: inline-block;
       stroke: var(--clr-accent);
     }
 
-    .logo-name {
+    .logo-text {
       display: inline-block;
       max-inline-size: 10ch; /* max 10ch per line = wrap to two lines */
       text-transform: uppercase;
@@ -221,7 +219,7 @@ header {
     }
   }
 
-  .main-nav {
+  .main-navigation {
     display: flex; /* use grid to center vertically */
     align-items: center; /* center vertically */
     justify-content: end;
@@ -238,13 +236,6 @@ header {
       text-transform: uppercase;
     }
   }
-}
-
-.newsletter-section {
-  background-color: var(--clr-primary-light-1);
-}
-.ending-section {
-  background-color: var(--clr-primary-light-1);
 }
 
 .newsletter {
@@ -327,28 +318,22 @@ header {
 .ending-section {
   display: grid; /* grid layout */
   grid-template-columns: 1fr 1fr; /* two equal columns */
-  align-items: center; /* center items vertically */
-  justify-content: center; /* center items horizontally */
+  gap: 2rem; /* space between columns */
   
   .ending-left {
-    width: 50%; 
-    justify-self: start;  /* align to the left */
-    align-items: center; /* center vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .ending-right {
-    width: 50%; 
-      justify-self: end; /* align to the right */
-
-      h2 {
-          margin-bottom: 1rem;
-      }
-      
-      p {
-          margin-bottom: 2rem;
-      }
+    h2 {
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        margin-bottom: 2rem;
+    }
   }
-  
-  
 }
 
 /* Button styles */
@@ -554,13 +539,10 @@ footer {
   background-color: var(--clr-accent); /* accent bg */
   color: var(--clr-primary-light-1); /* light text on accent bg */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr; /* two equal columns */
 
   /* left side of the footer */
-  .footer-left {
-      /* align to the start */
-      justify-self: start;
-
+  .footer-links {
       h2 {
           font-size: var(--fs-700);
           margin-block-start: 0;
@@ -569,9 +551,7 @@ footer {
       
       p {
           margin-bottom: 1rem;
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
+          max-width: 70ch;
       }
       
       a {
@@ -588,14 +568,8 @@ footer {
   
   /* right side of the footer */
   .footer-right {
-      /* align to the end (right) */
-      justify-self: end;
-      
-      /* list of links in the footer */
       ul {
-        display: grid;
         grid-auto-flow: row; /* vertical list */
-        text-align: right;
       }
     
       a {
@@ -611,12 +585,15 @@ footer {
       }
   }
 
+  /* svg icons in the footer */
   svg {
-    stroke: var(--clr-primary-light-1);
-    fill: var(--clr-primary-light-1);
-    width: 1rem;
+    display: inline-block; /* inline block */
+    stroke: var(--clr-primary-light-1); /* light stroke */
+    fill: var(--clr-primary-light-1); /* light fill */
+    width: auto;
     height: 1rem;
   }
+
 }
 
 /*
@@ -652,8 +629,19 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   grid-column: fullwidth;
 }
 
+/* override fullwidth for ending-section and footer to use their own 2-column grids */
+.ending-section > .ending-left,
+.ending-section > .ending-right,
+footer > .footer-left,
+footer > .footer-right {
+  grid-column: auto;
+}
 
 /*** Utilities ***/
+
+.bg-light {
+  background-color: var(--clr-primary-light-1);
+}
 
 .visually-hidden {
   clip: rect(0 0 0 0);
