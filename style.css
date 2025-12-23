@@ -466,6 +466,7 @@ body {
   .author-info {
     margin-top: auto; /* push to bottom of card */
     display: flex;
+    align-items: center; /* center vertically */
     gap: var(--spacing-base);
 
     /* author avatar as circle */
