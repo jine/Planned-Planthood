@@ -842,3 +842,37 @@ because the nesting selector cannot represent pseudo-elements. */
   }
 }
 
+
+
+/* TINY Media query for TINY screens (up to 400px) */
+/* this is totally optional, but i want to make some font sizes and images smaller on very small screens */
+/* we could use clamp() for font sizes too, but this is just an example of media query usage */
+@media (max-width: 400px) {
+
+  .image-grid {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  h1 {
+    font-size: var(--fs-700); /* smaller font size for h1 */
+  }
+
+  h2 {
+    font-size: var(--fs-500); /* smaller font size for h2 */
+  }
+
+  h3 {
+    font-size: var(--fs-500); /* smaller font size for h3 */
+  }
+
+  .ending .image, .newsletter .image {
+    width: 8rem;
+    height: 8rem;
+
+    >svg {
+      max-width: 5rem;
+      max-height: 5rem;
+    }
+  }
+
+}
