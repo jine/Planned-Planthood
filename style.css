@@ -686,7 +686,63 @@ footer > .footer-right {
 
 }
 
-/* media query for smaller screens */
+/* Dialog element styling  */
+/* from https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog */
+
+/* Closed state of the dialog   */
+dialog {
+  opacity: 0;
+}
+
+/* Open state of the dialog  */
+dialog:open {
+  opacity: 1;
+}
+
+/* Before open state  */
+/* Needs to be after the previous dialog:open rule to take effect, as the specificity is the same */
+@starting-style {
+  dialog:open {
+    opacity: 0;
+  }
+}
+
+/* Closed backdrop styles */
+dialog::backdrop {
+  background-color: transparent;
+}
+
+/* Open state backdrop styles  */
+dialog:open::backdrop {
+  background-color: hsla(0, 0%, 0%, 0.65);
+}
+
+/* This starting-style rule cannot be nested inside the above selector
+because the nesting selector cannot represent pseudo-elements. */
+@starting-style {
+  dialog:open::backdrop {
+    background-color: transparent;
+  }
+}
+
+/* TABLET Media query for smaller screens (up to 600px) */
+@media (max-width: 900px) {
+
+  /* image grid to 3 columns */
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: none;
+
+    /* all images to auto placement, resetting whats done before */
+    img:nth-child(n) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+
+}
+
+/* MOBILE Media query for smaller screens (up to 600px) */
 @media (max-width: 600px) {
 
   .site-header .main-navigation {
@@ -761,42 +817,3 @@ footer > .footer-right {
   }
 }
 
-
-/* Dialog element styling  */
-/* from https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog */
-
-/* Closed state of the dialog   */
-dialog {
-  opacity: 0;
-}
-
-/* Open state of the dialog  */
-dialog:open {
-  opacity: 1;
-}
-
-/* Before open state  */
-/* Needs to be after the previous dialog:open rule to take effect, as the specificity is the same */
-@starting-style {
-  dialog:open {
-    opacity: 0;
-  }
-}
-
-/* Closed backdrop styles */
-dialog::backdrop {
-  background-color: transparent;
-}
-
-/* Open state backdrop styles  */
-dialog:open::backdrop {
-  background-color: hsla(0, 0%, 0%, 0.65);
-}
-
-/* This starting-style rule cannot be nested inside the above selector
-because the nesting selector cannot represent pseudo-elements. */
-@starting-style {
-  dialog:open::backdrop {
-    background-color: transparent;
-  }
-}
