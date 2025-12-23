@@ -226,17 +226,59 @@ body {
     justify-content: end;
     
     ul {
-      display: grid;
-      grid-auto-flow: column;
-      gap: 2rem;
+      display: flex;
     }
 
-    a {
+    li>a {
       font-size: var(--fs-400);
       font-weight: var(--fw-600);
       text-transform: uppercase;
+      padding: 0.5rem 1rem;
+
+      /* invert on hover / focus-visible */
+      &:hover,
+      &:focus-visible {
+        background-color: var(--clr-accent);
+        color: var(--clr-primary-light-1);
+        text-decoration: none;
+      }
     }
   }
+  
+  /**** Hamburger menu styles ****/
+
+  /* hamburger button hidden by default (Desktop-first) */
+  .hamburger-button {
+    display: none;
+    /* hamburger icon styles */
+    .icon-menu {
+      display: block;
+      width: 2.5rem;
+      height: 2.5rem;
+      stroke: var(--clr-accent);
+      cursor: pointer;
+
+      /* invert on hover / focus-visible */
+      &:hover,
+      &:focus-visible {
+        background-color: var(--clr-accent);
+        stroke: var(--clr-primary-light-1);
+      }
+    }
+  }
+  /* hamburger menu is actually a dialog, so lets style it... */
+  .hamburger-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100%;
+    background-color: var(--clr-primary-light-1);
+    opacity: 0.8;
+    z-index: 1000; /* on top of other content */
+
+  }
+
 }
 
 .newsletter {
@@ -337,10 +379,13 @@ body {
 .btn-green {
     background-color: var(--clr-accent);
     color: var(--clr-primary-light-1);
+    border: 1px solid var(--clr-accent);
 
     &:hover,
     &:focus-visible {
-        background-color: var(--clr-accent-dark);
+      background-color: var(--clr-primary-light-1);
+      border-color: var(--clr-accent);
+      color: var(--clr-accent);
     }
     
 }
@@ -643,35 +688,6 @@ https://www.youtube.com/watch?v=cf-J4ffMBfo
   position: absolute;
   white-space: nowrap;
   width: 1px;
-}
-
-/**** Hamburger menu styles ****/
-
- /* hamburger button hidden by default (Desktop-first) */
-.hamburger-button {
-  display: none;
-}
-
-/* hamburger icon styles */
-.icon-menu {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  stroke: var(--clr-accent);
-  cursor: pointer;
-}
-
-/* hamburger menu is actually a dialog, so lets style it... */
-.hamburger-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50vw;
-  height: 100%;
-  background-color: var(--clr-primary-light-1);
-  opacity: 0.8;
-  z-index: 1000; /* on top of other content */
-
 }
 
 /* Dialog element styling  */
