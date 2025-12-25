@@ -36,16 +36,33 @@
                             <li><a href="#kontakt">Kontakt</a></li>
                         </ul>
 
-                        <a href="#dialog-menu" class="hamburger-button" aria-label="Öppna Mobilmeny" onclick="document.getElementById('dialog-menu').showModal();return false;">
-                           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="icon icon-menu" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <!-- Hamburger button to open mobile menu -->
+                        <a href="#dialog-menu" class="hamburger-button" aria-label="Öppna Mobilmeny"
+                            onclick="document.getElementById('dialog-menu').showModal();return false;">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="icon icon-menu" width="32" height="32"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <line x1="4" y1="6" x2="20" y2="6" />
                                 <line x1="4" y1="12" x2="20" y2="12" />
                                 <line x1="4" y1="18" x2="20" y2="18" />
                             </svg>
                         </a>
-
+                        
+                        <!-- Bonus: Mobile menu as an dialog /w closing icon -->
                         <dialog id="dialog-menu" class="dialog-menu" closedby="any" class="dialog-menu" aria-hidden="true">
+                            <!-- close button -->
+                            <a href="#close" class="close-icon" onclick="document.getElementById('dialog-menu').close(); return false;"
+                                aria-label="Stäng Mobilmeny">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-close" width="32" height="32" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                </svg>
+                            </a>
+
+                            <!-- actual menu list inside dialog -->
                             <ul role="list" class="dialog-menu-list" aria-label="Mobilmeny">
                                 <li><a href="#hem">Hem</a></li>
                                 <li><a href="#historik">Historik</a></li>
