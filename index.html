@@ -36,7 +36,7 @@
                             <li><a href="#kontakt">Kontakt</a></li>
                         </ul>
 
-                        <a href="#hamburger-menu" class="hamburger-button" aria-label="Öppna mobilmeny" onclick="document.getElementById('hamburger-menu').showModal()">
+                        <a href="#dialog-menu" class="hamburger-button" aria-label="Öppna Mobilmeny" onclick="document.getElementById('dialog-menu').showModal();return false;">
                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="icon icon-menu" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                 <line x1="4" y1="6" x2="20" y2="6" />
@@ -45,8 +45,8 @@
                             </svg>
                         </a>
 
-                        <dialog id="hamburger-menu" class="hamburger-menu" closedby="any" class="dialog-menu" aria-hidden="true">
-                            <ul role="list" class="dialog-menu-list">
+                        <dialog id="dialog-menu" class="dialog-menu" closedby="any" class="dialog-menu" aria-hidden="true">
+                            <ul role="list" class="dialog-menu-list" aria-label="Mobilmeny">
                                 <li><a href="#hem">Hem</a></li>
                                 <li><a href="#historik">Historik</a></li>
                                 <li><a href="#tips">Tips</a></li>
