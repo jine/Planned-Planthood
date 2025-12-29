@@ -787,7 +787,7 @@ because the nesting selector cannot represent pseudo-elements. */
   }
 
   .newsletter {
-    margin: 2rem; /* reduce margins */
+    margin: 2rem 0; /* reduce margins */
     .content {
       text-align: center;
     }
