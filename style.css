@@ -558,6 +558,7 @@ body {
   }
 
   /* this is kinda ugly, but i want to make sure that the tags and h3 have a minimum height, so that cards with few tags or short titles dont end up too small */
+  /* this could probably be done better with grid/flexbox, but this is simple and works for now... */
   .tags {
     min-height: 4rem;
   }
