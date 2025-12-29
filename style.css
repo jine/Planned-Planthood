@@ -551,6 +551,7 @@ body {
 
   /* padding for all content */
   /* maybe i should use :not() instead here, and exclude only img? */
+  /* could also use the .flow class here instead of repeating the padding maybe */
   h3, p, .author-info, .tags {
     padding-inline: var(--spacing-base);
     padding-block-start: 0.5rem;
