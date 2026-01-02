@@ -419,14 +419,13 @@ body {
     margin-right: 8rem; /* space to the right */
 
     h2, p {
-        margin-bottom: var(--spacing-base);
+        margin-block-end: var(--spacing-base);
     }
 
     /* button in ending */
     .btn {
       justify-self: end; /* align button to the right */
       margin-top: auto; /* push to bottom of content */
-
     }
   }
 }

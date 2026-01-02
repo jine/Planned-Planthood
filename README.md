@@ -1,4 +1,7 @@
 # Inlämningsuppgift Planned Planthood
+
+**[Implementeringsöversikt](implementation-summary.md)**
+
 Uppgiften är att göra en sida enligt nedanstående bilder, text och kod-stycken.
 
 ## Inlämning
