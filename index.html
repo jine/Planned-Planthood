@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Planned Planthood - En plats för växtälskare att planera och dela sina trädgårdsidéer.">
+    
     <title>FE25ht - Jim Nelin | Planned Planthood</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.svg">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -86,9 +89,9 @@
             <h1 id="intro-heading">Våra uppskattade växter</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ex vero harum recusandae et, nemo ea, non fugit sapiente sit dolore autem! Expedita illo deleniti maiores harum consequatur debitis hic.</p>
         </section>
-        
-        <!-- Image gallery -->
-        <section class="image-grid">
+
+        <!-- Image gallery, hidden from screen readers -->
+        <section class="image-grid" aria-hidden="true">
             <img src="https://picsum.photos/id/106/600" alt="Rosa blomma">
             <img src="https://picsum.photos/id/152/600" alt="Lila blommor">
             <img src="https://picsum.photos/id/306/600" alt="Näckros">
@@ -134,7 +137,7 @@
             <div class="plants-container">
                 <!-- Cucumber card -->
                 <article class="plant-card">
-                    <a href="#gurka" aria-label="Gurka">
+                    <a href="#gurka" aria-hidden="true" tabindex="-1">
                         <img src="https://picsum.photos/id/292/600" alt="Gurka">
                         <svg aria-hidden="true" viewBox="0 0 71 93" fill="none" class="watermark"
                             xmlns="http://www.w3.org/2000/svg">
@@ -162,7 +165,7 @@
                 
                 <!-- Tomato card -->
                 <article class="plant-card">
-                    <a href="#tomat" aria-label="Tomat">
+                    <a href="#tomat" aria-hidden="true" tabindex="-1">
                         <img src="https://picsum.photos/id/102/600" alt="Tomat">
                         <svg aria-hidden="true" viewBox="0 0 71 93" fill="none" class="watermark"
                             xmlns="http://www.w3.org/2000/svg">
@@ -190,7 +193,7 @@
 
                 <!-- Pelargon card -->
                 <article class="plant-card">
-                    <a href="#pelargon" aria-label="Pelargon">
+                    <a href="#pelargon" aria-hidden="true" tabindex="-1">
                         <img src="https://picsum.photos/id/11/600" alt="Pelargon">
                         <svg aria-hidden="true" viewBox="0 0 71 93" fill="none" class="watermark"
                             xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +222,7 @@
 
                 <!-- Basil card -->
                 <article class="plant-card">
-                    <a href="#basilika">
+                    <a href="#basilika" aria-hidden="true" tabindex="-1">
                         <img src="https://picsum.photos/id/400/600" alt="Basilika">
                         <svg aria-hidden="true" viewBox="0 0 71 93" fill="none" class="watermark"
                             xmlns="http://www.w3.org/2000/svg">
@@ -247,7 +250,7 @@
 
                 <!-- Salad card -->
                 <article class="plant-card">
-                    <a href="#sallad">
+                    <a href="#sallad" aria-hidden="true" tabindex="-1">
                         <img src="https://picsum.photos/id/10/600" alt="Sallad">
                         <svg aria-hidden="true" viewBox="0 0 71 93" fill="none" class="watermark"
                             xmlns="http://www.w3.org/2000/svg">
@@ -275,7 +278,7 @@
 
                 <!-- Fern card -->
                 <article class="plant-card">
-                    <a href="#ormbunke">
+                    <a href="#ormbunke" aria-hidden="true" tabindex="-1">
                         <img src="https://picsum.photos/id/25/600" alt="Ormbunke">
                         <svg aria-hidden="true" viewBox="0 0 71 93" fill="none" class="watermark"
                             xmlns="http://www.w3.org/2000/svg">
@@ -307,7 +310,7 @@
 
                 <!-- Sunflower card -->
                 <article class="plant-card">
-                    <a href="#solros" aria-label="Solros">
+                    <a href="#solros" aria-hidden="true" tabindex="-1">
                         <img src="https://picsum.photos/id/206/600" alt="Solros">
                         <svg aria-hidden="true" viewBox="0 0 71 93" fill="none" class="watermark"
                             xmlns="http://www.w3.org/2000/svg">
@@ -334,7 +337,7 @@
 
                 <!-- Lavender card -->
                 <article class="plant-card">
-                    <a href="#lavendel" aria-label="Lavendel">
+                    <a href="#lavendel" aria-hidden="true" tabindex="-1">
                         <img src="https://picsum.photos/id/360/600" alt="Lavendel">
                         <svg aria-hidden="true" viewBox="0 0 71 93" fill="none" class="watermark"
                             xmlns="http://www.w3.org/2000/svg">
@@ -361,7 +364,7 @@
 
                 <!-- Monstera card -->
                 <article class="plant-card">
-                    <a href="#monstera" aria-label="Monstera">
+                    <a href="#monstera" aria-hidden="true" tabindex="-1">
                         <img src="https://picsum.photos/id/152/600" alt="Monstera">
                         <svg aria-hidden="true" viewBox="0 0 71 93" fill="none" class="watermark"
                             xmlns="http://www.w3.org/2000/svg">
@@ -388,7 +391,7 @@
 
                 <!-- Cactus card -->
                 <article class="plant-card">
-                    <a href="#kaktus" aria-label="Kaktus">
+                    <a href="#kaktus" aria-hidden="true" tabindex="-1">
                         <img src="https://picsum.photos/id/106/600" alt="Kaktus">
                         <svg aria-hidden="true" viewBox="0 0 71 93" fill="none" class="watermark"
                             xmlns="http://www.w3.org/2000/svg">
@@ -416,7 +419,7 @@
 
                 <!-- Rose card -->
                 <article class="plant-card">
-                    <a href="#ros" aria-label="Ros">
+                    <a href="#ros" aria-hidden="true" tabindex="-1">
                         <img src="https://picsum.photos/id/306/600" alt="Ros">
                         <svg aria-hidden="true" viewBox="0 0 71 93" fill="none" class="watermark"
                             xmlns="http://www.w3.org/2000/svg">
@@ -512,13 +515,13 @@
                                 <path d="M-3-3h24v24H-3z" />
                                 <path d="M17 12.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H1C.4 0 0 .4 0 1c0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM16 9h2c0-5-4-9-9-9v2c3.9 0 7 3.1 7 7zm-4 0h2c0-2.8-2.2-5-5-5v2c1.7 0 3 1.3 3 3z" fill="#FFF" />
                             </g>
-                        </svg> Telefon: <a href="tel:020-1234567">020-1234567</a></p>
+                        </svg> Telefon: <a href="tel:020-1234567" aria-label="Ring oss på 020-1234567">020-1234567</a></p>
                     <p><svg class="icon" aria-hidden="true" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
                             <g fill="none" fill-rule="evenodd">
                                 <path d="M-2-4h24v24H-2z" />
                                 <path d="M18 0H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 14h-2V5.2L10 9 4 5.2V14H2V2h1.2L10 6.2 16.8 2H18v12z" fill="#FFF" />
                             </g>
-                        </svg> E-post: <a href="mailto:info@plannedplant.com">info@plannedplant.com</a></p>
+                        </svg> E-post: <a href="mailto:info@plannedplant.com" aria-label="Kontakta oss på info@plannedplant.com">info@plannedplant.com</a></p>
                 </address>
             </div>
             <!-- Main navigation, same as header links -->
