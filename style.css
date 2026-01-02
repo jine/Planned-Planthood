@@ -376,7 +376,6 @@ body {
     .btn {
       /* align button to the right */
       margin-left: auto;
-      flex: 0 0 auto; /* prevent shrinking */
     }
   }
 }
@@ -426,6 +425,8 @@ body {
     /* button in ending */
     .btn {
       justify-self: end; /* align button to the right */
+      margin-top: auto; /* push to bottom of content */
+
     }
   }
 }
@@ -439,6 +440,7 @@ body {
     cursor: pointer;
     border: 0;
 
+    /* remove underline on hover / focus-visible */
     &:hover,
     &:focus-visible {
         text-decoration: none;
@@ -451,6 +453,7 @@ body {
     color: var(--clr-primary-light-1);
     border: 1px solid var(--clr-accent);
 
+    /* invert colors on hover / focus-visible */
     &:hover,
     &:focus-visible {
       background-color: var(--clr-primary-light-1);
@@ -471,12 +474,20 @@ body {
   /* there is a media-query to allow responsive design for this */
   grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
 
-  /* default image styles */
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  /* Desktop first layout */
+  /*grid-template-areas:
+    "a a b c d d"
+    "a a e e f f";*/
+
+  /*
+  AI-änswer regarding above solution:
+
+  CSS doesn't allow dynamically mapping classes to grid-area values without explicit rules (no variables or attribute selectors work here, as grid-area expects a specific identifier). 
+  Named areas are designed for readability in fixed layouts, but they require that explicit assignment step.
+  For a small fixed gallery like yours (6 images), inline styles or classes are the most straightforward. 
+  If this gallery is dynamic or repeats often, the line-based :nth-child approach scales better.
+
+  */
 
   /* Pink flower - large left (2 columns, 2 rows) */
   img:nth-child(1) {
@@ -512,6 +523,13 @@ body {
   img:nth-child(6) {
     grid-column: 5 / span 2; /* columns 5 and 6 */
     grid-row: 2 / span 1; /* row 2 */
+  }
+
+  /* default image styles */
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -827,6 +845,7 @@ because the nesting selector cannot represent pseudo-elements. */
 
   .ending {
     margin: 2rem 0; /* reduce margins */
+
     .content {
       margin-right: 0; /* remove right margin */
       align-items: center; /* center content */
