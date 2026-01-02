@@ -1,6 +1,12 @@
 # Inlämningsuppgift Planned Planthood
 
-**[Implementeringsöversikt](implementation-summary.md)**
+## Implementeringsöversikt
+
+Denna webbplats är en responsiv presentation av olika växter, byggd med ren HTML och CSS. Den använder CSS Grid för layout, har tillgänglighetsfunktioner som skip-länkar och ARIA-etiketter, och är optimerad för mobil, tablet och desktop.
+
+[Länk till fullständig översikt](implementation-summary.md)
+
+## Uppgift
 
 Uppgiften är att göra en sida enligt nedanstående bilder, text och kod-stycken.
 
