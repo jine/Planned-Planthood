@@ -518,8 +518,9 @@ body {
 
 /***** content inside each plant card *****/
 .plant-card {
-  display: flex; /* flexbox for vertical layout */
-  flex-direction: column; /* stack content vertically */
+  display: grid;
+  grid-template-rows: auto auto auto 1fr; /* image/link, title, author, tags - TODO: add names for these. */
+  align-content: start; 
   border: 1px solid var(--clr-primary-light-2);
   background-color: var(--clr-primary-light-1);
   box-shadow: var(--border-shadow);
