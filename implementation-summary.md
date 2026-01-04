@@ -66,7 +66,7 @@ Planned Planthood is a responsive website showcasing various plants, built with 
 - Focus management for interactive elements
 
 #### Responsive Design
-- Mobile-first approach with progressive enhancement
+- Desktop-first approach with media-queries for mobile and tablet
 - Breakpoints for tablet and desktop
 - Flexible grid systems that adapt to screen size
 - Touch-friendly interactive elements
