@@ -27,8 +27,8 @@ Planned Planthood is a responsive website showcasing various plants, built with 
 
 #### Layout System
 - **CSS Grid**: Primary layout method for main content areas, plant cards grid, and component positioning
-- **Flow Utility**: Custom `.flow` class for consistent vertical spacing between elements
-- **Fullwidth Sections**: Alternating background colors using `.fullwidth` wrapper classes
+- **Flow Utility**: Using `.flow` class for consistent vertical spacing between elements
+- **Fullwidth Sections**: Background colors of certain sections are extended using `.fullwidth` wrapper classes.
 
 #### Theming
 - **CSS Custom Properties**: Comprehensive color palette, typography scales, and spacing system
